@@ -28,7 +28,20 @@ class MainDisplay {
         const taskList = document.getElementById('taskList');
         list.forEach(task => {
             let item = document.createElement('li');
-            item.innerText = task.title;
+            let itemContainer = document.createElement('div');
+            let itemTitle = document.createElement('h2');
+            itemTitle.innerText = task.title;
+            itemContainer.appendChild(itemTitle);
+
+            let itemDescription = document.createElement('p');
+            itemDescription.innerText = task.description;
+            itemContainer.appendChild(itemDescription);
+            
+            let itemPriority = document.createElement('p');
+            itemPriority.innerText = task.priority;
+            itemContainer.appendChild(itemPriority);
+
+            item.appendChild(itemContainer);
             taskList.appendChild(item);
         });
 

@@ -19,17 +19,16 @@ const content = document.getElementById('content');
 
 // build the main display
 const mainDisplay = new MainDisplay();
-mainDisplay.setCurrentProjectTitle(manager.getCurrentProject());
-content.appendChild(mainDisplay.show());
-mainDisplay.populateTasks(today.taskList);
 
-/*
 // build the project display
 const display = new ProjectDisplay();
 
 content.appendChild(display.diplayProjects());
 display.addProjectToDisplay(today);
-*/
+
+mainDisplay.setCurrentProjectTitle(manager.getCurrentProject());
+content.appendChild(mainDisplay.show());
+mainDisplay.populateTasks(today.taskList);
 
 
 // create interface that creates new tasks
