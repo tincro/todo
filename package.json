@@ -4,7 +4,8 @@
   "description": "A ToDo app for The Odin Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/tincro/todo#readme",
   "dependencies": {
     "webpack": "^5.69.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

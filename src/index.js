@@ -12,6 +12,9 @@ const task = new Task("Make Coffee", "Make coffee to wake up", "high");
 today.addTask(task);
 
 
+
+
+
 // create interface that creates new tasks
 // create interface that creates new projects
 // populate page to display projects
