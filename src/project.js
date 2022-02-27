@@ -7,6 +7,10 @@ class Project {
     addTask(task) {
         this.taskList.push(task);
     }
+    
+    getTaskList(){
+        return this.taskList;
+    }
 }
 
 export default Project;

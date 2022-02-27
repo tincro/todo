@@ -8,8 +8,12 @@ class Manager {
         this.projectList.push(newProject);
     }
 
-    setCurrentProject(project){
+    setCurrentProject(project) {
         this.currentProject = project;
+    }
+
+    getCurrentProject() {
+        return this.currentProject;
     }
 }
 

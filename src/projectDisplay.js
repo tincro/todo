@@ -12,8 +12,7 @@ class ProjectDisplay {
        this.title = "Projects"
    }
 
-   diplayProjects() {
-       // populate the display to show projects
+   diplayProjects(projectList) {
        const element = document.createElement('div');
        element.id = "projects-wrapper";
 

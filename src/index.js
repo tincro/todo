@@ -1,6 +1,8 @@
+import MainDisplay from "./mainDisplay";
 import Manager from "./manager";
 import Project from "./project";
 import ProjectDisplay from "./projectDisplay";
+import Task from "./task";
 
 // create a new manager
 const manager = new Manager();
@@ -10,12 +12,25 @@ const today = new Project("Today");
 manager.addProject(today);
 manager.setCurrentProject(today);
 
-// build the display
-const display = new ProjectDisplay();
+const coffee = new Task("Coffee", "Get some coffee for the day", 3);
+today.addTask(coffee);
+
 const content = document.getElementById('content');
+
+// build the main display
+const mainDisplay = new MainDisplay();
+mainDisplay.setCurrentProjectTitle(manager.getCurrentProject());
+content.appendChild(mainDisplay.show());
+mainDisplay.populateTasks(today.taskList);
+
+/*
+// build the project display
+const display = new ProjectDisplay();
 
 content.appendChild(display.diplayProjects());
 display.addProjectToDisplay(today);
+*/
+
 
 // create interface that creates new tasks
 // create interface that creates new projects
