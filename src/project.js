@@ -8,3 +8,5 @@ class Project {
         this.taskList.push(task);
     }
 }
+
+export default Project;

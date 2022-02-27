@@ -12,3 +12,5 @@ class Manager {
         this.currentProject = project;
     }
 }
+
+export default Manager;

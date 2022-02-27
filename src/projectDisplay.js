@@ -9,10 +9,10 @@ class ProjectDisplay {
         </div>
     */
    constructor(){
-       this.title = "Projects";
+       this.title = "Projects"
    }
 
-   diplay() {
+   diplayProjects() {
        // populate the display to show projects
        const element = document.createElement('div');
        element.id = "projects-wrapper";
@@ -24,13 +24,17 @@ class ProjectDisplay {
        return element;
    }
    
-   addProjectToDisplay(title){
-    const projectBlock = document.createElement('div');
-    const projectTitle = document.createElement('h2');
-    projectTitle.innerText = title;
-    projectBlock.appendChild(projectTitle);
-    
-    const wrapper = document.getElementById('projects-wrapper');
-    wrapper.appendChild(projectBlock);
+   addProjectToDisplay(project) {
+        const projectBlock = document.createElement('div');
+        const projectTitle = document.createElement('h2');
+        projectTitle.innerText = project.title;
+        projectBlock.appendChild(projectTitle);
+        
+        const wrapper = document.getElementById('projects-wrapper');
+        wrapper.appendChild(projectBlock);
+        
+        return wrapper;
    }
 }
+
+export default ProjectDisplay;

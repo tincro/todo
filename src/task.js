@@ -6,6 +6,7 @@ class Task {
         // TODO add dueDate
         // TODO add notes
         // TODO add checklist
+        //  --  if complete give "complete" class
     }
     
     changePriority(newPriority) {
