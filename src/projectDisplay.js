@@ -14,7 +14,7 @@ class ProjectDisplay {
 
    diplayProjects(projectList) {
        const element = document.createElement('div');
-       element.classList.add('projects-display');
+       element.classList.add('project-display');
        element.id = 'projects-wrapper';
 
        const title = document.createElement('h1');

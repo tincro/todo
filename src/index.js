@@ -2,7 +2,8 @@ import MainDisplay from "./mainDisplay";
 import Manager from "./manager";
 import Project from "./project";
 import ProjectDisplay from "./projectDisplay";
-import './style.css';
+import Task from "./task";
+import './styles.css';
 
 const manager = new Manager();
 const today = new Project("Today");
@@ -29,5 +30,3 @@ mainDisplay.populateTasks(today.taskList);
 
 // create interface that creates new tasks
 // create interface that creates new projects
-// populate page to display projects
-

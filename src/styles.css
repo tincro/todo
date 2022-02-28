@@ -1,7 +1,14 @@
 
+body {
+    background-color: #503b5c;
+    color: #b5b4b5;
+}
 
-.project-display, .main-display {
+.project-display {
     width: 25%;
     display: inline-block;
-    background-color: bisque;
+}
+.main-display {
+    width: 75%;
+    display: inline-block;
 }
