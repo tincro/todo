@@ -28,5 +28,9 @@ body {
 
 .project-display, .main-display {
     display: inline-block;
-    
+
+}
+
+.project-item {
+    margin-left: 25px;
 }

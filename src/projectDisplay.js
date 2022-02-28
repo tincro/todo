@@ -1,3 +1,5 @@
+// A class to display the projects panel
+
 class ProjectDisplay {
     /*
         <div id="projects-wrapper">
@@ -5,30 +7,36 @@ class ProjectDisplay {
             <div>
                 <h2>Today</h2>
             </div>
-
         </div>
     */
    constructor(){
-       this.title = 'Projects'
+       this.title = 'Projects';
+       this.sectionWrapperId = 'project-display-wrapper';
+       this.projectsWrapperId = 'projects-wrapper';
    }
 
    diplayProjects() {
        const element = document.createElement('div');
        element.classList.add('project-display');
-       element.id = 'projects-wrapper';
+       element.id = this.sectionWrapperId;
 
        const title = document.createElement('h1');
        title.innerText = this.title;
        element.appendChild(title);
-   
+
+       const wrapper = document.createElement('div');
+       wrapper.id = this.projectsWrapperId;
+       element.appendChild(wrapper);
+
        return element;
    }
    
    updateDisplay(projectList) {
-       const wrapper = document.getElementById('projects-wrapper');
+       const wrapper = document.getElementById(this.projectsWrapperId);
        
         projectList.forEach(project => {
             const projectBlock = document.createElement('div');
+            projectBlock.classList.add('project-item');
             const projectTitle = document.createElement('h2');
             projectTitle.innerText = project.title;
             projectBlock.appendChild(projectTitle);
@@ -39,7 +47,7 @@ class ProjectDisplay {
    }
 
    formDisplay() {
-       const div = document.getElementById('projects-wrapper');
+       const div = document.getElementById(this.sectionWrapperId);
        const field = document.createElement('fieldset');
        const input = document.createElement('input');
        input.id = "project-input";
@@ -50,6 +58,13 @@ class ProjectDisplay {
        btn.id = "project-btn";
        field.appendChild(btn);
        div.appendChild(field);
+       return div;
+   }
+
+   reset() {
+       // grab all nodes
+       const div = document.getElementById(this.projectsWrapperId);
+       div.innerHTML = '';
        return div;
    }
 }
