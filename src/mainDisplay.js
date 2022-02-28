@@ -8,17 +8,18 @@ class MainDisplay {
         </div>
     */
     constructor(){
-        this.title = "CurrentProject";
+        this.title = 'CurrentProject';
     }
 
     show() {
         const element = document.createElement('div');
+        element.classList.add('main-display');
         const title = document.createElement('h1');
         title.innerText = this.title;
         element.appendChild(title);
 
         const tasks = document.createElement('ul');
-        tasks.id = "taskList";
+        tasks.id = 'taskList';
         element.appendChild(tasks);
     
         return element;
@@ -38,7 +39,7 @@ class MainDisplay {
             itemContainer.appendChild(itemDescription);
             
             let itemPriority = document.createElement('p');
-            itemPriority.innerText = task.priority;
+            itemPriority.innerText = `Priority: ${task.priority}`;
             itemContainer.appendChild(itemPriority);
 
             item.appendChild(itemContainer);

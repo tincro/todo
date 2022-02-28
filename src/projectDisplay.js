@@ -9,12 +9,13 @@ class ProjectDisplay {
         </div>
     */
    constructor(){
-       this.title = "Projects"
+       this.title = 'Projects'
    }
 
    diplayProjects(projectList) {
        const element = document.createElement('div');
-       element.id = "projects-wrapper";
+       element.classList.add('projects-display');
+       element.id = 'projects-wrapper';
 
        const title = document.createElement('h1');
        title.innerText = this.title;

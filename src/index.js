@@ -2,25 +2,21 @@ import MainDisplay from "./mainDisplay";
 import Manager from "./manager";
 import Project from "./project";
 import ProjectDisplay from "./projectDisplay";
-import Task from "./task";
+import './style.css';
 
-// create a new manager
 const manager = new Manager();
-// create a new project
 const today = new Project("Today");
-// add project to manager list
+
 manager.addProject(today);
 manager.setCurrentProject(today);
 
-const coffee = new Task("Coffee", "Get some coffee for the day", 3);
+const coffee = new Task('Coffee', 'Get some coffee for the day', 3);
 today.addTask(coffee);
 
 const content = document.getElementById('content');
 
-// build the main display
 const mainDisplay = new MainDisplay();
 
-// build the project display
 const display = new ProjectDisplay();
 
 content.appendChild(display.diplayProjects());

@@ -1,0 +1,7 @@
+
+
+.project-display, .main-display {
+    width: 25%;
+    display: inline-block;
+    background-color: bisque;
+}
