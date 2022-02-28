@@ -11,6 +11,10 @@ class Project {
     getTaskList(){
         return this.taskList;
     }
+    
+    removeTask(task) {
+        // remove task from array
+    }
 }
 
 export default Project;

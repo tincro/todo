@@ -8,7 +8,7 @@ class MainDisplay {
         </div>
     */
     constructor(){
-        this.title = 'CurrentProject';
+        this.title = 'CurrenProject';
     }
 
     show() {
