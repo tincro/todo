@@ -31,6 +31,8 @@ body {
 
 }
 
-.project-item {
+.project-item, #taskList {
     margin-left: 25px;
 }
+
+
