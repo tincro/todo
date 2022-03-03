@@ -8,7 +8,7 @@ class MainDisplay {
         </div>
     */
     constructor(){
-        this.title = 'CurrenProject';
+        this.title = 'CurrentProject';
         this.sectionWrapperId = 'main-display';
         this.taskWrapperId = 'taskList'
     }

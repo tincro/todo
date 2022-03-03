@@ -5,24 +5,21 @@ import ProjectDisplay from "./projectDisplay";
 import Task from "./task";
 import './styles.css';
 
-
-
-// function newProject(){
-//     const projectName = document.getElementById('project-btn');
-// }
-
-
-
+// TODO function to auto-add current project
+// -- click on project title to set current project
+// hide interfaces behind button
+// style app
+// add delete functionality
 
 
 const manager = new Manager();
-const today = new Project("Today");
+// const today = new Project("Today");
 
-manager.addProject(today);
-manager.setCurrentProject(today);
+// manager.addProject(today);
+// manager.setCurrentProject(today);
 
-const coffee = new Task('Coffee', 'Get some coffee for the day', 3);
-today.addTask(coffee);
+// const coffee = new Task('Coffee', 'Get some coffee for the day', 3);
+// today.addTask(coffee);
 
 const content = document.getElementById('content');
 
@@ -34,9 +31,11 @@ content.appendChild(display.diplayProjects());
 display.formDisplay();
 display.updateDisplay(manager.projectList);
 
-mainDisplay.setCurrentProjectTitle(manager.getCurrentProject());
+if (manager.currentProject){
+    mainDisplay.setCurrentProjectTitle(manager.getCurrentProject());
+}
 content.appendChild(mainDisplay.show());
-mainDisplay.populateTasks(today.taskList);
+// mainDisplay.populateTasks(today.taskList);
 mainDisplay.formDisplay();
 
 
@@ -50,6 +49,10 @@ projectBtn.addEventListener(
         const value = projectInput.value;
         const newProject = new Project(value);
         manager.addProject(newProject);
+        if(manager.currentProject === null) {
+            manager.currentProject = newProject;
+        }
+
         display.updateDisplay(manager.projectList);
         projectInput.value = '';
     }
